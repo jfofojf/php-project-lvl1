@@ -23,6 +23,7 @@ function start(): void
 
 function calculate(int $num1, int $num2, string $operator): int
 {
+    $correctAnswer = 0;
     switch ($operator) {
         case '+':
             $correctAnswer = $num1 + $num2;
