@@ -18,20 +18,14 @@ function start(): void
         $correctAnswer = calculate($num1, $num2, $operator);
         return [$question, $correctAnswer];
     };
-    return runGame(TASK, $generateGameData);
+    runGame(TASK, $generateGameData);
 }
 
 function calculate(int $num1, int $num2, string $operator): int
 {
-    switch ($operator) {
-        case '+':
-            $correctAnswer = $num1 + $num2;
-            break;
-        case '-':
-            $correctAnswer = $num1 - $num2;
-            break;
-        case '*':
-            $correctAnswer = $num1 * $num2;
-    }
-    return $correctAnswer;
+    return match ($operator) {
+        '+' => $num1 + $num2,
+        '-' => $num1 - $num2,
+        '*' => $num1 * $num2,
+    };
 }

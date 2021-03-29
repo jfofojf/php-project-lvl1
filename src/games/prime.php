@@ -18,12 +18,12 @@ function isPrime(int $num): bool
     return $prime;
 }
 
-function start(): mixed
+function start(): void
 {
     $generateGameData = function (): array {
         $question = rand(2, 100);
-        $correstAnswer = isPrime($question) ? 'yes' : 'no';
-        return [$question, $correstAnswer];
+        $correctAnswer = isPrime($question) ? 'yes' : 'no';
+        return [$question, $correctAnswer];
     };
-    return runGame(TASK, $generateGameData);
+    runGame(TASK, $generateGameData);
 }

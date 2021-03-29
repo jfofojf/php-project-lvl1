@@ -11,7 +11,7 @@ function gcd(int $a, int $b): int
     return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
-function start(): mixed
+function start(): void
 {
     $generateGameData = function (): array {
         $firtsDigit = rand(1, 30);
@@ -20,5 +20,6 @@ function start(): mixed
         $correctAnsewer = gcd($firtsDigit, $secondDigit);
         return [$question, $correctAnsewer];
     };
-    return runGame(TASK, $generateGameData);
+    runGame(TASK, $generateGameData);
 }
+

@@ -8,10 +8,10 @@ const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $digit): bool
 {
-    return $digit % 2 === 0 ? true : false;
+    return $digit % 2 === 0;
 }
 
-function start(): mixed
+function start(): void
 {
     $generateGameData = function (): array {
         $question = rand(1, 100);

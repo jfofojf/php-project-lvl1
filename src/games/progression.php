@@ -33,14 +33,14 @@ function arrToStr(array $arr, int $randHide): string
     return $result;
 }
 
-function start(): mixed
+function start(): void
 {
     $generateGameData = function (): array {
         $progression = generateProgression();
         $randHide = rand(0, 9);
-        $correctAnsewer = $progression[$randHide];
+        $correctAnswer = $progression[$randHide];
         $question = arrToStr($progression, $randHide);
-        return [$question, $correctAnsewer];
+        return [$question, $correctAnswer];
     };
-    return runGame(TASK, $generateGameData);
+    runGame(TASK, $generateGameData);
 }
