@@ -8,7 +8,7 @@ const TASK = "What is the result of the expression?";
 
 const OPERATORS = ['+', '-', '*'];
 
-function start(): void
+function start(): mixed
 {
     $generateGameData = function (): array {
         $num1 = rand(1, 100);
