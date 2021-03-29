@@ -33,7 +33,7 @@ function arrToStr(array $arr, int $randHide): string
     return $result;
 }
 
-function start(): void
+function start(): mixed
 {
     $generateGameData = function (): array {
         $progression = generateProgression();

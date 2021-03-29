@@ -11,7 +11,7 @@ function gcd(int $a, int $b): int
     return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
-function start(): void
+function start(): mixed
 {
     $generateGameData = function (): array {
         $firtsDigit = rand(1, 30);

@@ -11,7 +11,7 @@ function isEven(int $digit): bool
     return $digit % 2 === 0 ? true : false;
 }
 
-function start(): void
+function start(): mixed
 {
     $generateGameData = function (): array {
         $question = rand(1, 100);
