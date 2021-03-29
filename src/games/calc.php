@@ -8,9 +8,9 @@ const TASK = "What is the result of the expression?";
 
 const OPERATORS = ['+', '-', '*'];
 
-function start()
+function start(): void
 {
-    $generateGameData = function () {
+    $generateGameData = function (): array {
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
         $operator = OPERATORS[array_rand(OPERATORS)];
@@ -21,7 +21,7 @@ function start()
     return runGame(TASK, $generateGameData);
 }
 
-function calculate($num1, $num2, $operator)
+function calculate(int $num1, int $num2, string $operator): int
 {
     switch ($operator) {
         case '+':

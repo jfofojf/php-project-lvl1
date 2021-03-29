@@ -18,9 +18,9 @@ function isPrime(int $num): bool
     return $prime;
 }
 
-function start()
+function start(): void
 {
-    $generateGameData = function () {
+    $generateGameData = function (): array {
         $question = rand(2, 100);
         $correstAnswer = isPrime($question) ? 'yes' : 'no';
         return [$question, $correstAnswer];

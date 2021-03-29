@@ -6,14 +6,14 @@ use function BrainGames\Engine\runGame;
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 
-function gcd($a, $b)
+function gcd(int $a, int $b): int
 {
     return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
-function start()
+function start(): void
 {
-    $generateGameData = function () {
+    $generateGameData = function (): array {
         $firtsDigit = rand(1, 30);
         $secondDigit = rand(1, 30);
         $question = "$firtsDigit $secondDigit";
