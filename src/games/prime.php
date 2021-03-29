@@ -18,7 +18,7 @@ function isPrime(int $num): bool
     return $prime;
 }
 
-function start(): mixed
+function start(): void
 {
     $generateGameData = function (): array {
         $question = rand(2, 100);
