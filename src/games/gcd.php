@@ -14,11 +14,11 @@ function gcd(int $a, int $b): int
 function start(): void
 {
     $generateGameData = function (): array {
-        $firtsDigit = rand(1, 30);
+        $firstDigit = rand(1, 30);
         $secondDigit = rand(1, 30);
-        $question = "$firtsDigit $secondDigit";
-        $correctAnsewer = gcd($firtsDigit, $secondDigit);
-        return [$question, $correctAnsewer];
+        $question = "$firstDigit $secondDigit";
+        $correctAnswer = gcd($firstDigit, $secondDigit);
+        return [$question, $correctAnswer];
     };
     runGame(TASK, $generateGameData);
 }
