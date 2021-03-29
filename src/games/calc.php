@@ -23,9 +23,15 @@ function start(): void
 
 function calculate(int $num1, int $num2, string $operator): int
 {
-    return match ($operator) {
-        '+' => $num1 + $num2,
-        '-' => $num1 - $num2,
-        '*' => $num1 * $num2,
-    };
+    switch ($operator) {
+        case '+':
+            $correctAnswer = $num1 + $num2;
+            break;
+        case '-':
+            $correctAnswer = $num1 - $num2;
+            break;
+        case '*':
+            $correctAnswer = $num1 * $num2;
+    }
+    return $correctAnswer;
 }
