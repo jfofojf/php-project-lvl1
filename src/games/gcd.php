@@ -22,5 +22,3 @@ function start(): void
     };
     runGame(TASK, $generateGameData);
 }
-
-
