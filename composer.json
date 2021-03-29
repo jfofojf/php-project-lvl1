@@ -30,7 +30,7 @@
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.12",
-      "ext-gmp": "*"
+        "ext-gmp": "^7.4"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5"
